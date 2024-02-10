@@ -1,0 +1,15 @@
+Registration
+
+sanitize the input
+email verification
+password encryption
+password rules
+No duplication of users
+when refresh a record is getting created 
+
+
+Login
+sanitize the input 
+
+
+bruteforce attack
