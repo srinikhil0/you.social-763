@@ -91,12 +91,6 @@ require 'includes/form_handlers/register_handler.php';
       </div>
     </div>
   <script type="text/javascript" src="assets/js/register.js"></script>
-  <!-- <script src="https://apis.google.com/js/platform.js" async defer></script>   -->
-  <!-- <style type="text/css">
-    body {
-      overflow-x: hidden;
-      overflow-y: hidden;
-    }
-  </style> -->
+  
 </body>
 </html>
