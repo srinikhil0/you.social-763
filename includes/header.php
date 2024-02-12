@@ -116,11 +116,11 @@ else {
 						</a>
 					</li>
 					<li>
-						<a href="<?php echo $userLoggedIn; ?>" style="text-decoration: none;" ><img src="<?php echo $user['profile_pic']; ?>" width="20px" style="height: 20px; border-radius: 50%; width: 20px;"></a>
-					</li>
-					<li>
                         <a href="settings.php" style="text-decoration: none;"><h3><i class="fas fa-toolbox"></i></h3></a>
                     </li>
+					<li>
+						<a href="<?php echo $userLoggedIn; ?>" style="text-decoration: none;" ><img src="<?php echo $user['profile_pic']; ?>" width="20px" style="height: 20px; border-radius: 50%; width: 20px;"></a>
+					</li>
 					<li>
                         <a href="includes/handlers/logout.php" style="text-decoration: none;"><h3>Logout</h3></a>
 					</li>

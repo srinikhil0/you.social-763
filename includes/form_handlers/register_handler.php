@@ -31,6 +31,9 @@ if(isset($_POST['sign_btn'])) {
 	//Password
 	$pass = $_POST['sign_password']; 	
 
+	//Profile Pic
+	$profile_pic = "/you.social/assets/images/svg/default_profile_pic_0.svg";
+
 
 	
 	if(empty($error_array)){

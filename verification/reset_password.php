@@ -2,7 +2,7 @@
 
 $msg = "";
 
-$con = mysqli_connect("localhost", "root", "", "students_asylum"); //connection variable
+$con = mysqli_connect("localhost", "root", "", "you.social"); //connection variable
 
 if(isset($_POST['set'])){
 
@@ -10,23 +10,15 @@ if(isset($_POST['set'])){
         $vkey = $_GET['vkey'];
         $password1 = $_POST['password1']; //Get password1
         $password1 = password_hash($password1, PASSWORD_BCRYPT);
-        // $password2 = $_POST['password2']; //Get password2
-        // $password2 = password_hash($password2, PASSWORD_BCRYPT);
 
-        // if(password_verify($password1, $password2)){
-            $update_query = mysqli_query($con, "UPDATE users set pass = '$password1' WHERE vkey = '$vkey'");
+        $update_query = mysqli_query($con, "UPDATE users set pass = '$password1' WHERE vkey = '$vkey'");
 
-            if($update_query){
-                header('location: ../resetpassword.html');
-            }
-            else{
-                header('location: reset_password.php');
-            }
-        // }
-        // else{
-        //     $_SESSION['passmsg'] = "Passwords are not matching. Please try again";
-        // }
-
+        if($update_query){
+          header('location: ../resetpassword.html');
+        }
+        else{
+          header('location: reset_password.php');
+        }
     }
     
 }
