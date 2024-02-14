@@ -32,17 +32,22 @@ if(isset($_POST['sign_btn'])) {
 	$pass = $_POST['sign_password']; 	
 
 	//Profile Pic
-	$profile_pic = "/you.social/assets/images/svg/default_profile_pic_0.svg";
+	$profile_pic = "assets\images\svg\default_profile_pic.svg";
 
 
 	
-	if(empty($error_array)){
-		$pass = password_hash($pass, PASSWORD_DEFAULT);  //Encrypt password before sending to database
+	if(empty($error_array)) {
+		$pass = password_hash($pass, PASSWORD_DEFAULT); // Encrypt password before sending to database
 	
-		$query = mysqli_query($con, "INSERT INTO users VALUES ('', '$username', '$first_name', '$last_name', '$email', '$pass', '$profile_pic', '0', '0', '0', 'no', ',$username,')");
-		
-
+		$query = "INSERT INTO users (username, first_name, last_name, email, pass, profile_pic, num_posts, num_likes, num_dislikes, user_closed, friend_array) VALUES ('$username', '$first_name', '$last_name', '$email', '$pass', '$profile_pic', '0', '0', '0', 'no', ',$username,')";
+	
+		$result = mysqli_query($con, $query);
+	
+		if(!$result) {
+			echo "Error: " . mysqli_error($con);
+		}
 	}
+	
 	
 }
 
