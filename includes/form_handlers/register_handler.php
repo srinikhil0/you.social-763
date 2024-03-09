@@ -32,7 +32,7 @@ if(isset($_POST['sign_btn'])) {
 	$pass = $_POST['sign_password']; 	
 
 	//Profile Pic
-	$profile_pic = "assets\images\svg\default_profile_pic.svg";
+	$profile_pic = "assets/images/svg/default_profile_pic.svg";
 
 
 	
